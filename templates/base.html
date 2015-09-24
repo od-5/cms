@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block titke %}{{ SETUP.meta_title|default:'Главная страница сайта' }}{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}{{ SETUP.meta_desc|default:'' }}{% endblock %}">
+  <meta name="keywords" content="{% block meta_key %}{{ SETUP.meta_key|default:'' }}{% endblock %}">
+  <script src="{{ STATIC_URL }}js/jquery-1.11.2.min.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery.form.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery.validate.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery.flexslider-min.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery.fancybox.pack.js"></script>
+  <script src="{{ STATIC_URL }}js/notify-combined.min.js"></script>
+  <script src="{{ STATIC_URL }}js/scrollup.js"></script>
+  <script src="{{ STATIC_URL }}js/common.js"></script>
+  <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+  {% block extra_media %}
+  {% endblock %}
+  {% if SETUP.top_js %}
+    {{ SETUP.top_js }}
+  {% endif %}
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container_12">
+      <header>
+          <div class="grid_12">
+            <h1>Header</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+            </p>
+          </div>
+          <div class="clear"></div>
+      </header>
+      <section class="content">
+        <div class="grid_12">
+          <h1>Hello</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+          </p>
+          asdfsdasd <br>asdasdasd
+        </div>
+        <div class="clear"></div>
+      </section>
+    {% block content %}
+    {% endblock %}
+      <div class="clear"></div>
+    </div>
+    <div class="page-buffer"></div>
+  </div>
+  <footer class="footer">
+    <div class="container_12">
+      <div class="grid_12">
+        <h1>Footer</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur debitis excepturi expedita facilis fuga id in inventore, ipsum maiores nemo, optio quod saepe suscipit veniam! At ducimus incidunt modi?
+        </p>
+      </div>
+    </div>
+  </footer>
+<div id="scrollup"><img alt="Прокрутить вверх" src="{{ STATIC_URL }}img/up.png"></div>
+{% block bottom_js %}
+{% endblock %}
+{% if SETUP.bottom_js %}
+  {{ SETUP.bottom_js }}
+{% endif %}
+</body>
+</html>

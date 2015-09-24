@@ -1,0 +1,4 @@
+.idea/
+*.pyc
+README.md
+db.sqlite3
